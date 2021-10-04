@@ -12,9 +12,7 @@ import ItineraryCard from '../components/ItineraryCard'
 import {Title} from 'react-native-paper'
 
 const City = (props) => {
-  console.log(props)
     const city = props.route.params.city
-    console.log(city)
     const [itineraries, setItineraries] = useState([])
 
     useEffect(()=>{

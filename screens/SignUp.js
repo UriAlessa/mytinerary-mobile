@@ -10,6 +10,7 @@ const SignUp = (props) => {
 
     const [user, setUser] = useState({userFirstName: '', userLastName: '', username: '', email: '', password: '', userImage: '', country: 'Mobile'})
     const [error, setError] = useState([])
+    console.log(user)
     const signup=async()=>{
         const response = await props.signUp(user)
         if (response.data.success) {
@@ -24,6 +25,7 @@ const SignUp = (props) => {
             return setError(error.message)
           })
         }
+
     }
 
     return (

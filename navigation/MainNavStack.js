@@ -34,7 +34,7 @@ export const NavigatorCities = (props) => {
             headerRight: () => <LogoMenu navigation={props.navigation} />
          }}>
             <Stack.Screen name='Cities' component={Cities} options={{title: 'Cities', headerLeft: () => <ArrowBack navigation={props.navigation} to={'Home'}/>}} />
-            <Stack.Screen name='City' component={City} options={{title: 'City'}} />
+            <Stack.Screen name='City' component={City} options={{title: 'City'}} navigation={props.navigation} />
         </Stack.Navigator>
     )
 }
