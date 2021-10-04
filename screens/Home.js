@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import CarouselImages from '../components/CarouselImages';
 
 const Home = (props) => {
-
     const images = ['https://i.imgur.com/QOC9Xvp.jpg', 'https://i.imgur.com/hyCOgch.jpg', 'https://i.imgur.com/TvYaNdb.jpg']
 
     return (
@@ -18,7 +17,7 @@ const Home = (props) => {
                             <Text style={styles.h1}>Find your perfect trip, designed by insiders who know and love their cities.</Text>
                         </View>
                         <View>
-                            <Button style={styles.ctaButton} icon="city" mode="contained" dark onPress={() => props.navigation.navigate('cities')}> start now! </Button>
+                            <Button style={styles.ctaButton} icon="map-search-outline" mode="contained" dark onPress={() => props.navigation.navigate('Cities')}> start now! </Button>
                         </View>
                     </View>
                 </ImageBackground>
@@ -56,8 +55,8 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     brandLogo: {
-        width: 200, 
-        height: 40, 
+        width: 350, 
+        height: 65, 
         marginBottom: 25,
     },
     h1: {

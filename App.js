@@ -2,12 +2,20 @@ import React, { useState } from 'react'
 import { Provider as PaperProvider, Button } from 'react-native-paper'
 import {NavigationContainer} from '@react-navigation/native'
 import Navigator from './navigation/MainNavDrawer'
+import rootReducer from './redux/reducers/rootReducer'
+import {applyMiddleware, createStore} from 'redux'
+import {Provider} from 'react-redux'
+import thunk from 'redux-thunk'
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 const App = () => {
   return (
-      <NavigationContainer>
-        <Navigator />
-      </NavigationContainer>
+    <Provider store={store}>
+        <NavigationContainer>
+          <Navigator />
+        </NavigationContainer>
+      </Provider>
   )
 }
 
