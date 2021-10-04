@@ -1,36 +1,20 @@
 import React, { useState } from 'react'
-import { ImageBackground, StyleSheet, Text, View, Dimensions, Pressable } from 'react-native'
+import { ImageBackground, StyleSheet, Text, View, Dimensions, Pressable} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { TextInput, Button } from 'react-native-paper';
 import userActions from '../redux/actions/userActions';
 import { connect } from 'react-redux';
-import { useToast } from 'react-native-toast-notifications'
 
 const LogIn = (props) => {
     const [error, setError] = useState('')
     const [user, setUser] = useState({username: '', password: ''})
-    const toast = useToast()
 
     const submitBtn = async ()=>{
       const response = await props.logIn(user)
       if(!response.data.success) {
         setError(response.data.error)
-        toast.show(`Oops! ${response.data.error}`, {
-          type: "danger",
-          placement: "bottom",
-          duration: 2500,
-          offset: 30,
-          animationType: "slide-in",
-        })
       } else {
         setUser('')
-        toast.show("Welcome back!", {
-          type: "success",
-          placement: "top",
-          duration: 2500,
-          offset: 30,
-          animationType: "slide-in",
-        })
         props.navigation.navigate('Home')
       }
     }

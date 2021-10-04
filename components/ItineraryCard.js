@@ -68,7 +68,7 @@ const ItineraryCard =(props)=>{
               renderItem={({ item }) => {
                   return (
                     <Card style={{marginVertical: 10, width: Dimensions.get('window').width}}>
-                      <Card.Title title={item.title} left={LeftContent} />
+                      <Card.Title titleStyle={{fontSize: 15}} title={item.title} left={LeftContent} />
                       <Card.Cover source={{ uri: item.image }} />
                   </Card>
                   )

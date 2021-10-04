@@ -5,28 +5,28 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { connect } from 'react-redux'
 import { TextInput, Button } from 'react-native-paper'
 import userActions from '../redux/actions/userActions'
+import { useToast } from 'react-native-toast-notifications'
 
 const SignUp = (props) => {
 
     const [user, setUser] = useState({userFirstName: '', userLastName: '', username: '', email: '', password: '', userImage: '', country: 'Mobile'})
     const [error, setError] = useState([])
-    console.log(user)
-    const signup=async()=>{
-        const response = await props.signUp(user)
-        if (response.data.success) {
-          setUser('')
-          props.navigation.navigate('Home')
-        }
-        if (response.data.error === 'Username already in use, try another.') {
-          return ToastAndroid.showWithGravity('Account alredy in use, try another', ToastAndroid.SHORT, ToastAndroid.TOP)
-        }
-        if (!response.data.success) {
-        response.data.errors.map((error) => {
-            return setError(error.message)
-          })
-        }
 
+    const signup=async()=>{
+      const response = await props.signUp(user)
+      if (response.data.success) {
+        setUser('')
+        props.navigation.navigate('Home')
+      }
+      if (response.data.error === 'Username already in use, try another.') {
+        return ToastAndroid.showWithGravity('Account alredy in use, try another', ToastAndroid.SHORT, ToastAndroid.TOP)
+      }
+      if (!response.data.success) {
+      response.data.errors.map((error) => {
+        return setError(error.message)
+      })
     }
+  }
 
     return (
         <View style={styles.container}>

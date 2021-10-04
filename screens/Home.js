@@ -26,6 +26,9 @@ const Home = (props) => {
                     <CarouselImages images={images} height={180} width={380} />
                 </View>
             </View>
+            <View style={{backgroundColor: '#6200EE', width: Dimensions.get('window').width, height: 50, alignItems: 'center', justifyContent: 'center'}}>
+                <Text style={{fontWeight: 'bold', color: 'white', fontSize: 18}}>Mytinerary - Uriel Alessandro</Text>
+            </View>
         </View>
     )
 }

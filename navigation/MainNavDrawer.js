@@ -1,10 +1,7 @@
 import {createDrawerNavigator} from '@react-navigation/drawer'
-import Cities from '../screens/Cities'
 import React, {useEffect} from 'react'
-import MainNavStack, { NavigatorCities, NavigatorCity, NavigatorHome, NavigatorLogIn, NavigatorSignUp } from './MainNavStack'
+import { NavigatorCities, NavigatorHome, NavigatorLogIn, NavigatorSignUp } from './MainNavStack'
 import DrawerStyle from '../components/DrawerStyle'
-import LogIn from '../screens/LogIn'
-import SignUp from '../screens/SignUp'
 import { connect } from 'react-redux'
 import userActions from '../redux/actions/userActions'
 
@@ -18,12 +15,16 @@ const Navigator = (props) => {
     const loginLs = async () =>{
         const token = await AsyncStorage.getItem('token')
         if(token){
-            logginLS(token)
+            props.logginLS(token)
         }
     }
 
     return (
-        <Drawer.Navigator drawerContent={props =><DrawerStyle {...props} />}>
+        <Drawer.Navigator drawerContent={props =><DrawerStyle {...props} />} screenOptions={{headerStyle: {
+            backgroundColor: '#6200EE'
+        }, headerTitleStyle: {
+            color: 'white'
+        }, }}>
             <Drawer.Screen name='Home' component={NavigatorHome} />
             <Drawer.Screen name='Cities' component={NavigatorCities} options={{headerShown: false}} />
             <Drawer.Screen name='LogIn' component={NavigatorLogIn} options={{headerShown: false}} />

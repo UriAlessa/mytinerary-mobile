@@ -25,11 +25,12 @@ export const NavigatorCities = (props) => {
     return (
         <Stack.Navigator screenOptions={{
             headerStyle: {
-               backgroundColor: "white",
+               backgroundColor: "#6200EE",
             },
             headerTintColor: "black",
             headerTitleStyle: {
-               fontSize: 35,
+               fontSize: 24,
+               color: 'white'
             },
             headerRight: () => <LogoMenu navigation={props.navigation} />
          }}>
@@ -43,11 +44,12 @@ export const NavigatorLogIn = (props) => {
     return (
         <Stack.Navigator navigation={props.navigation} screenOptions={{
             headerStyle: {
-                backgroundColor: "white",
+                backgroundColor: "#6200EE",
             },
             headerTintColor: "black",
             headerTitleStyle: {
-                fontSize: 35,
+               fontSize: 24,
+               color: 'white'
             },
             headerRight: () => <LogoMenu navigation={props.navigation} />
         }}>
@@ -60,11 +62,12 @@ export const NavigatorSignUp = (props) => {
     return (
         <Stack.Navigator navigation={props.navigation} screenOptions={{
             headerStyle: {
-               backgroundColor: "white",
+                backgroundColor: "#6200EE",
             },
             headerTintColor: "black",
             headerTitleStyle: {
-               fontSize: 35,
+               fontSize: 24,
+               color: 'white'
             },
             headerRight: () => <LogoMenu navigation={props.navigation} />
          }}>

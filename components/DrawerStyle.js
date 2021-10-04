@@ -9,7 +9,7 @@ import userActions from '../redux/actions/userActions'
 function DrawerStyle(props) {
     return(
         <View style={{ flex: 1 }}>
-      <ImageBackground source={{uri: 'https://i.imgur.com/hyCOgch.jpeg'}} style={{height: 170, width: 280, justifyContent: 'flex-end'}}>
+      <ImageBackground source={{uri: 'https://i.imgur.com/2dszfRv.jpg'}} style={{height: 230, width: 280, justifyContent: 'flex-end'}}>
         <View style={{ marginLeft: 15, flexDirection: 'column' }}>
           <Title style={styles.title}>{!props.loggedIn ? 'Welcome!' : 'Welcome, ' + props.loggedIn.userFirstName}</Title>
         </View>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => {
   return {
-      loggedIn: state.user.loggedIn
+    loggedIn: state.user.loggedIn
   }
 }
 
