@@ -4,11 +4,8 @@ Versión mobile de la WebApp de viajes Mytinerary
 
 ## Comenzando 🚀
 
-Instalar dependencias para el cliente
-npm install
-
-Iniciar con
-expo start
+* Instalar dependencias con: npm install
+* Correr la app en Expo con: expo start
 
 ## Construido con 🛠️
 
