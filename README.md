@@ -9,8 +9,6 @@ Versión mobile de la WebApp de viajes Mytinerary
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
 * React Native
 * Redux
 * Bcrypt
