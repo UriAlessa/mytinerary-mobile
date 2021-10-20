@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, ImageBackground, Dimensions, ToastAndroid } from 'react-native'
 import {TouchableOpacity } from 'react-native-gesture-handler'
-import { connect } from 'react-redux'
 
 const CityCard =({city})=>{ 
 
