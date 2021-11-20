@@ -2,6 +2,8 @@
 
 Versión mobile de la WebApp de viajes Mytinerary
 
+![image](https://github.com/UriAlessa/mytinerary-mobile/blob/master/assets/mytinerarymobile.png?raw=true)
+
 ## Comenzando 🚀
 
 * Instalar dependencias con: npm install
